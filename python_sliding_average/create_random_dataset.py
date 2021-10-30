@@ -14,6 +14,8 @@ def create_random_dataset(
     """
     Creates data_points random points between 0 and max_value and dumps them to filename
 
+    Crashes my MacBook Air at the moment, only runs on my Linux desktop 😅
+
     Args:
         data_points: number of random data points to generate
         max_value: maximum value those data points can have
@@ -29,7 +31,7 @@ def create_random_dataset(
 
     for i in range(data_points):
         if i * 100 % data_points == 0:
-            print(f"{i/data_points*100}% done")
+            print(f"{int(i/data_points*100)}% done")
 
         random_points.append(random.randint(0, max_value))
 
